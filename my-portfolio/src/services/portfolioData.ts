@@ -88,6 +88,6 @@ export const portfolioData: PortfolioData = {
   contact: {
     email: 'suvarshanroy1@gmail.com',
     phone: '+91 9100500790',
-    linkedIn: 'https://linkedin.com/in/suvarshan-m-3a3752a27',
+    linkedIn: 'https://www.linkedin.com/in/suvarshan-m-3a375a227',
   },
 };
