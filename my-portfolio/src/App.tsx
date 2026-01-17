@@ -1,30 +1,15 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import type { PortfolioData } from './types/portfolio';
 import { portfolioData } from './services/portfolioData';
 
 function App() {
   const [data] = useState<PortfolioData>(portfolioData);
-  const [displayedTitle, setDisplayedTitle] = useState('');
-  const fullTitle = "Suvarshan's Portfolio";
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index <= fullTitle.length) {
-        setDisplayedTitle(fullTitle.slice(0, index));
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 100);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="portfolio-container">
-      <h1 className="typewriter">{displayedTitle}</h1>
+      <h1>Suvarshan's Portfolio</h1>
       <>
         <section className="about">
           <h2>About</h2>
