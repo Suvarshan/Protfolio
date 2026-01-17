@@ -9,14 +9,42 @@ function App() {
 
   return (
     <div className="portfolio-container">
-      <h1>Suvarshan's Portfolio</h1>
-      <>
-        <section className="about">
-          <h2>About</h2>
-          <p>{data.about}</p>
-        </section>
-        <section className="skills">
-          <h2>Skills</h2>
+      {/* Navigation */}
+      <nav className="navbar">
+        <div className="nav-brand">Suvarshan's Protfolio</div>
+        <ul className="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      {/* Hero Section */}
+      <section id="home" className="hero-section">
+        <h1>Suvarshan Muntha</h1>
+        <p className="hero-subtitle">Full Stack Developer | AWS Cloud | Micro Services | AI Tools | Database Management (MySQL, SSMS) | API Development (GraphQL/AppSync, EventBridge) | GCP</p>
+      </section>
+
+      {/* About Section with Profile Photo */}
+      <section id="about" className="about-section">
+        <div className="about-content">
+          <div className="profile-image-container">
+            <img src="/profile.jpg" alt="Suvarshan" className="profile-image" />
+          </div>
+          <div className="about-text">
+            <h2>About Me</h2>
+            <p>{data.about}</p>
+            <a href="/resume.pdf" download className="download-btn-secondary">
+              <span className="btn-icon">⬇️</span>
+              <span className="btn-text">Download Resume</span>
+            </a>
+          </div>
+        </div>
+      </section>
+        <section className="skills" id="skills">
+          <h2>Technical Skills</h2>
           <div className="skills-grid">
             {data.skills.map((skillGroup) => (
               <div key={skillGroup.category} className="skill-column">
@@ -28,7 +56,7 @@ function App() {
             ))}
           </div>
         </section>
-        <section className="experience">
+        <section className="experience" id="experience">
           <h2>Experience</h2>
           {data.experience.map((exp, idx) => (
             <div key={idx} className="exp-item">
@@ -40,7 +68,7 @@ function App() {
             </div>
           ))}
         </section>
-        <section className="projects">
+        <section className="projects" id ="projects">
           <h2>Projects</h2>
           <div className="projects-grid">
             {data.projects.map((project, idx) => (
@@ -69,15 +97,26 @@ function App() {
             {data.certifications.map(cert => <li key={cert}>{cert}</li>)}
           </ul>
         </section>
-        <section className="contact">
-          <h2>Contact</h2>
-          <ul>
-            <li>Email: <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a></li>
-            <li>Phone: {data.contact.phone}</li>
-            <li>LinkedIn: <a href={data.contact.linkedIn} target="_blank" rel="noopener noreferrer">{data.contact.linkedIn}</a></li>
-          </ul>
+        <section id="contact" className="contact">
+          <h2>Get In Touch</h2>
+          <div className="contact-cards">
+            <div className="contact-card">
+              <div className="contact-icon">📧</div>
+              <h3>Email</h3>
+              <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a>
+            </div>
+            <div className="contact-card">
+              <div className="contact-icon">📞</div>
+              <h3>Phone</h3>
+              <p><a href={`tel:${data.contact.phone}`}>{data.contact.phone}</a></p>
+            </div>
+            <div className="contact-card">
+              <div className="contact-icon">💼</div>
+              <h3>LinkedIn</h3>
+              <a href={data.contact.linkedIn} target="_blank" rel="noopener noreferrer">Connect With Me</a>
+            </div>
+          </div>
         </section>
-      </>
     </div>
   );
 }
