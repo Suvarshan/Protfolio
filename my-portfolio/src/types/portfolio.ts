@@ -23,6 +23,7 @@ export type PortfolioData = {
   experience: Experience[];
   projects: Project[];
   certifications: string[];
+  languages?: string[];
   contact: {
     email: string;
     phone: string;

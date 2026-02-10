@@ -1,27 +1,35 @@
 import type { PortfolioData } from '../types/portfolio';
 
 export const portfolioData: PortfolioData = {
-  about: `Full Stack Developer with 2+ years of professional experience in designing, developing, testing, and deploying scalable enterprise and cloud-native web applications. Strong expertise in Angular and React for frontend development, Node.js and Express.js for backend services, and relational databases including MySQL and SQL Server. Hands-on experience building serverless architectures using AWS and working knowledge of Google Cloud Platform. Proven ability to integrate Generative AI solutions into applications to automate workflows and enhance business functionality. Comfortable working in Agile environments with a strong focus on clean code, testing, performance optimization, and end-to-end ownership of features.`,
+  about: `Full Stack Developer with over 2+ years of experience in building, modernizing, and deploying scalable enterprise and cloud-native applications. Demonstrates strong proficiency in Angular and React for frontend development, as well as Node.js and Express.js for backend services. Possesses hands-on experience in designing RESTful and GraphQL APIs, implementing serverless and event-driven architectures, and deploying applications across AWS, Google Cloud Platform, and Kubernetes environments. Actively utilizes AI-assisted development tools to enhance delivery speed while ensuring the production of clean, maintainable code. Comfortable operating within Agile/Scrum frameworks, with a commitment to end-to-end ownership of features from design through to deployment.`,
   skills: [
     {
-      category: 'Languages & Frontend',
-      items: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'jQuery', 'Bootstrap', 'TypeScript', 'Angular (v14, v15, v17)', 'React']
+      category: 'Frontend Development',
+      items: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'TypeScript', 'Angular (v14, v15, v17)', 'React', 'Bootstrap']
     },
     {
-      category: 'Backend & Databases',
-      items: ['Node.js (v18, v20, v22)', 'Express.js', 'MySQL', 'SQL Server', 'RESTful APIs', 'Event APIs', 'GraphQL (Basic)']
+      category: 'Backend Development',
+      items: ['Node.js (v18, v20, v22)', 'Express.js', 'RESTful APIs', 'GraphQL', 'Event APIs']
     },
     {
-      category: 'Tools & Cloud',
-      items: ['DevOps', 'AWS (CDK, Amplify, Lambda, S3, API Gateway)', 'GCP (Cloud Functions, Cloud Storage)', 'GitHub Actions', 'Git', 'GitHub', 'Postman', 'VS Code']
+      category: 'Database & Data Management',
+      items: ['MySQL', 'SQL Server', 'Schema Design', 'Query Optimization', 'Stored Procedures', 'TypeORM']
     },
     {
-      category: 'Unit Testing',
-      items: ['Jest', 'Mocha', 'Chai', 'Custom Test Runner', 'Integration Testing']
+      category: 'Cloud & DevOps',
+      items: ['AWS (CDK, Amplify, Lambda, S3, API Gateway, AppSync)', 'GCP (Cloud Functions, Cloud Storage)', 'Kubernetes', 'Jenkins CI/CD', 'GitHub Actions', 'Serverless Framework']
     },
     {
-      category: 'AI & AI Tools',
-      items: ['Claude', 'Cline', 'Generative AI APIs', 'LLM Integration', 'Workflow Automation']
+      category: 'Testing & Quality',
+      items: ['Jest', 'Mocha', 'Chai', 'Custom Test Runner', 'Unit Testing', 'Integration Testing']
+    },
+    {
+      category: 'AI & Automation',
+      items: ['Claude', 'Cline', 'GitHub Copilot', 'Generative AI APIs', 'LLM Integration', 'Workflow Automation']
+    },
+    {
+      category: 'Tools & Collaboration',
+      items: ['Git', 'GitHub', 'Postman', 'VS Code', 'Agile/Scrum']
     }
   ],
   experience: [
@@ -29,56 +37,35 @@ export const portfolioData: PortfolioData = {
       company: 'Delta Technology and Management Services Pvt. Ltd',
       role: 'Consultant | Full Stack Developer',
       duration: 'Sep 2023 – Present',
-      description: `• Design, develop, and maintain scalable enterprise web applications using Angular, Node.js, MySQL, and SQL Server.\n• Architect and implement RESTful backend services with Node.js and Express.js, ensuring secure and efficient data flow.\n• Design and optimize SQL queries and stored procedures, improving data processing efficiency and application performance.\n• Build and maintain comprehensive unit and integration test suites using Jest and Mocha; actively contributed to introducing a custom Test Runner for improved automation.\n• Integrate AI-powered features using AWS Lambda and Generative AI APIs (Claude, Cline) to enhance application capabilities.\n• Implement CI/CD pipelines using GitHub Actions and manage cloud deployments using AWS CDK, Amplify, and S3.\n• Follow Agile development practices, participating in sprint planning, reviews, and cross-team collaboration.`
+      description: `• Design, develop, and maintain enterprise-scale web applications using Angular, React, Node.js, and MySQL, ensuring scalability and maintainability.\n• Architect and implement secure RESTful and GraphQL APIs, including serverless and event-driven architectures to support high-availability systems.\n• Led the migration of RSI backend endpoints to a serverless architecture using AWS AppSync, GraphQL, and event APIs, reducing infrastructure overhead and improving scalability.\n• Built backend services using the Serverless Framework (serverless.yml) to enable automated and repeatable cloud deployments.\n• Implemented a custom Test Runner framework, significantly improving unit test coverage, execution reliability, and long-term maintainability.\n• Identified and resolved security vulnerabilities during dependency upgrades and Node.js version migrations, ensuring secure coding standards.\n• Migrated Angular applications from untyped to strictly typed forms, enforcing strong TypeScript interfaces.\n• Developed an end-to-end HRMS platform using React, Node.js, MySQL, and TypeORM, including entity modeling and database migration management.\n• Leveraged AI-assisted development tools such as GitHub Copilot and Cline (Claude APIs) to improve productivity and development speed.\n• Deployed applications to production environments using Jenkins-based CI/CD pipelines across AWS, GCP, and Kubernetes clusters.\n• Integrated GCP Cloud Storage (Buckets) for secure file upload and storage.\n• Collaborated closely with cross-functional teams in Agile/Scrum environments, participating in sprint planning, reviews, and continuous improvement initiatives.`
     }
   ],
   projects: [
     {
       title: 'E-Commerce Waste Management System (RSI)',
-      description: 'A comprehensive waste management and inventory automation system designed to streamline order processing, material tracking, and logistics workflows.',
-      technologies: ['Angular', 'TypeScript', 'Node.js', 'Express.js', 'MySQL'],
+      description: 'A comprehensive waste management and inventory automation platform designed to streamline order processing, material tracking, and logistics workflows.',
+      technologies: ['Angular', 'TypeScript', 'Node.js', 'Express.js', 'MySQL', 'AWS AppSync', 'GraphQL', 'Serverless Framework'],
       highlights: [
-        'Architected enterprise-scale application serving 500+ daily active users across multiple facilities',
-        'Engineered real-time data synchronization using WebSockets reducing latency from 5s to 200ms',
-        'Designed and optimized complex SQL queries with proper indexing achieving 40% performance improvement',
-        'Implemented role-based access control (RBAC) with JWT tokens ensuring enterprise-grade security',
-        'Built dynamic dashboard with interactive charts and real-time KPI tracking using Chart.js and D3.js'
-      ]
-    },
-    {
-      title: 'Finance Application',
-      description: 'A full-stack financial tracking platform with responsive frontend and serverless backend deployed on AWS.',
-      technologies: ['React', 'Node.js', 'Express.js', 'AWS Amplify', 'AWS Lambda', 'MySQL'],
-      highlights: [
-        'Developed serverless backend processing 100K+ transactions daily with 99.9% uptime SLA',
-        'Implemented multi-tenant isolation at database and API levels ensuring data security and compliance',
-        'Created advanced analytics engine with custom aggregations supporting 200+ report types',
-        'Optimized Lambda cold starts through code splitting reducing initialization from 3s to 400ms',
-        'Built automated compliance reporting with audit trails for regulatory requirements'
-      ]
-    },
-    {
-      title: 'Legacy System Migration',
-      description: 'Led migration of critical business modules from legacy systems to a modern Angular and Node.js architecture.',
-      technologies: ['Angular', 'Node.js', 'TypeScript', 'MySQL'],
-      highlights: [
-        'Led complete architectural refactoring breaking 500K LOC monolith into 8 independent microservices',
-        'Implemented distributed tracing and monitoring reducing MTTR from 4 hours to 15 minutes',
-        'Achieved 85%+ code coverage with comprehensive unit and integration test suites',
-        'Executed zero-downtime production migration using blue-green deployment strategy',
-        'Improved API response time by 65% through service isolation and optimized database queries'
+        'Designed and developed a comprehensive waste management and inventory automation platform',
+        'Implemented a custom Test Runner framework to improve test reliability and coverage',
+        'Addressed security vulnerabilities during package upgrades and Node.js migrations',
+        'Migrated Angular forms from untyped to strictly typed, creating well-defined TypeScript interfaces',
+        'Built modular Angular components and optimized backend APIs for logistics and material tracking workflows',
+        'Migrated traditional backend endpoints to a fully serverless architecture using AWS AppSync and GraphQL',
+        'Designed and implemented event-driven APIs for asynchronous processing',
+        'Managed deployments using serverless.yml, enabling scalable and cost-effective backend services'
       ]
     },
     {
       title: 'HRMS with AI Integration (In Progress)',
-      description: 'An AI-powered Human Resource Management System to automate HR workflows with intelligent employee query handling.',
-      technologies: ['React', 'Node.js', 'MySQL', 'AWS Lambda', 'Claude', 'Cline'],
+      description: 'An AI-powered Human Resource Management System to automate HR workflows with intelligent employee query handling and workflow automation.',
+      technologies: ['React', 'Node.js', 'MySQL', 'TypeORM', 'AWS', 'GCP', 'Kubernetes', 'Jenkins', 'Claude APIs'],
       highlights: [
-        'Integrated Claude API achieving 70% reduction in HR manual tasks through intelligent automation',
-        'Built intelligent resume parsing engine with 95%+ accuracy for candidate screening',
-        'Implemented conversational AI chatbot handling 40% of employee queries without HR intervention',
-        'Designed serverless event-driven architecture processing 5000+ HR events daily',
-        'Created secure document processing system with encryption for sensitive employee records'
+        'Developing an end-to-end HRMS application with React and Node.js',
+        'Implemented TypeORM entities and migration files to manage database schema changes',
+        'Used AI tools (GitHub Copilot, Cline with Claude APIs) to accelerate development',
+        'Deployed the application to live environments using Jenkins CI/CD, AWS, GCP, and Kubernetes',
+        'Integrated GCP Cloud Storage for secure document and file uploads'
       ]
     }
   ],
@@ -88,6 +75,7 @@ export const portfolioData: PortfolioData = {
   contact: {
     email: 'suvarshanroy1@gmail.com',
     phone: '+91 9100500790',
-    linkedIn: 'https://www.linkedin.com/in/suvarshan-m-3a375a227',
+    linkedIn: 'https://www.linkedin.com/in/suvarshan-m-3a3752a27',
   },
+  languages: ['English', 'Telugu', 'Tamil', 'Hindi']
 };
