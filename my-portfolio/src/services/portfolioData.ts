@@ -43,7 +43,7 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       title: 'E-Commerce Waste Management System (RSI)',
-      description: 'A comprehensive waste management and inventory automation platform designed to streamline order processing, material tracking, and logistics workflows.',
+      description: 'A comprehensive waste management, recycling, and disposal solutions for residential, commercial, and industrial customers, operating a large network of trucks, landfills, and recycling centers while focusing on sustainability, including turning landfill gas into energy.  and inventory automation platform designed to streamline order processing, material tracking, and logistics workflows.',
       technologies: ['Angular', 'TypeScript', 'Node.js', 'Express.js', 'MySQL', 'AWS AppSync', 'GraphQL', 'Serverless Framework'],
       highlights: [
         'Designed and developed a comprehensive waste management and inventory automation platform',
@@ -58,14 +58,15 @@ export const portfolioData: PortfolioData = {
     },
     {
       title: 'HRMS with AI Integration (In Progress)',
-      description: 'An AI-powered Human Resource Management System to automate HR workflows with intelligent employee query handling and workflow automation.',
-      technologies: ['React', 'Node.js', 'MySQL', 'TypeORM', 'AWS', 'GCP', 'Kubernetes', 'Jenkins', 'Claude APIs'],
+      description: 'A full-fledged Human Resource Management System (HRMS) designed for organizational operations, enabling daily employee status tracking, centralized management of personal and professional employee data, and improved internal communication with collaboration-focused features and end-to-end talent acquisition workflows.( Built Using AI tools like GitHub Copilot and Cline with Claude APIs to accelerate development and enhance code quality)',
+      technologies: ['React', 'Node.js', 'MySQL', 'TypeORM', 'AWS', 'GCP', 'Kubernetes', 'Jenkins', 'n8n'],
       highlights: [
-        'Developing an end-to-end HRMS application with React and Node.js',
-        'Implemented TypeORM entities and migration files to manage database schema changes',
-        'Used AI tools (GitHub Copilot, Cline with Claude APIs) to accelerate development',
-        'Deployed the application to live environments using Jenkins CI/CD, AWS, GCP, and Kubernetes',
-        'Integrated GCP Cloud Storage for secure document and file uploads'
+        'Designed and developed a full-fledged HRMS product enabling daily employee status tracking and centralized management of employee data',
+        'Integrated automated email notification services using n8n workflows, triggering emails at critical stages of recruitment, interviews, document submission, BGV, offers, and onboarding',
+        'Leveraged AI-assisted development tools including GitHub Copilot and Cline with Claude APIs to accelerate development and improve code quality',
+        'Deployed production applications using Jenkins-based CI/CD pipelines with scalable deployments across AWS and GCP using Kubernetes orchestration',
+        'Integrated GCP Cloud Storage (Buckets) for secure storage of employee and candidate documents, resumes, and onboarding files',
+        'Ensured cloud-native, scalable, and secure architecture suitable for enterprise HR operations and long-term organizational growth'
       ]
     }
   ],

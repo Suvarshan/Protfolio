@@ -511,6 +511,7 @@ section {
   font-weight: 600;
   margin: 0 0 0.8rem 0;
   transition: color 0.3s;
+  order: 1;
 }
 
 @media (max-width: 480px) {
@@ -527,8 +528,9 @@ section {
   color: #cbd5e1;
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   flex-grow: 1;
+  order: 2;
 }
 
 @media (max-width: 480px) {
@@ -539,7 +541,14 @@ section {
 }
 
 .project-tech {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(96, 165, 250, 0.3);
+  order: 3;
+}
+
+.project-highlights {
+  order: 4;
 }
 
 .project-tech strong,

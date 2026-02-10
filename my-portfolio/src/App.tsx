@@ -24,7 +24,7 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="hero-section">
         <h1>Suvarshan Muntha</h1>
-        <p className="hero-subtitle">Full Stack Developer | AWS Cloud | Micro Services | AI Tools | Database Management (MySQL, SSMS) | API Development (GraphQL/AppSync, EventBridge) | GCP</p>
+        <p className="hero-subtitle">Full Stack Developer | AWS Cloud | Micro Services | AI Tools | Database Management (MySQL, SSMS) | API Development (GraphQL/AppSync, EventBridge) | GCP | Kubernetes</p>
       </section>
 
       {/* About Section with Profile Photo */}
@@ -96,6 +96,10 @@ function App() {
           <ul>
             {data.certifications.map(cert => <li key={cert}>{cert}</li>)}
           </ul>
+        </section>
+        <section className="languages">
+          <h2>Languages</h2>
+          <p className="languages-list">{data.languages?.join(' | ')}</p>
         </section>
         <section id="contact" className="contact">
           <h2>Get In Touch</h2>
