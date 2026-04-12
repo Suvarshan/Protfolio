@@ -1,6 +1,6 @@
 // This is a portfolio data file for Suvarshan Muntha
 export const portfolioData = {
-  about: "Full Stack Developer with over 2+ years of experience in building, modernizing, and deploying scalable enterprise and cloud-native applications. Demonstrates strong proficiency in Angular and React for frontend development, as well as Node.js and Express.js for backend services. Possesses hands-on experience in designing RESTful and GraphQL APIs, implementing serverless and event-driven architectures, and deploying applications across AWS, Google Cloud Platform, and Kubernetes environments.",
+  about: "Full Stack Developer with over 2.7+ years of experience in building, modernizing, and deploying scalable enterprise and cloud-native applications. Demonstrates strong proficiency in Angular and React for frontend development, as well as Node.js and Express.js for backend services. Possesses hands-on experience in designing RESTful and GraphQL APIs, implementing serverless and event-driven architectures, and deploying applications across AWS, Google Cloud Platform, and Kubernetes environments.",
   skills: [
     {
       category: "Frontend Development",
@@ -12,11 +12,11 @@ export const portfolioData = {
     },
     {
       category: "Database & Data Management",
-      items: ["MySQL", "SQL Server", "Schema Design", "Query Optimization", "Stored Procedures", "TypeORM"]
+      items: ["MySQL", "SQL Server", "Schema Design", "Query Optimization", "TypeORM"]
     },
     {
       category: "Cloud & DevOps",
-      items: ["AWS (CDK, Amplify, Lambda, S3, API Gateway, AppSync)", "GCP (Cloud Functions, Cloud Storage)", "Kubernetes", "Jenkins CI/CD", "GitHub Actions", "Serverless Framework"]
+      items: ["AWS (CDK, Amplify, Lambda, S3, API Gateway, AppSync)", "GCP (Cloud Functions, Cloud Storage, Storage buckets)", "GKE (Google Kubernetes Engine, Clusters, Deployments, Services)", "Jenkins CI/CD", "GitHub Actions", "Serverless Framework"]
     },
     {
       category: "Testing & Quality",
@@ -28,7 +28,7 @@ export const portfolioData = {
     },
     {
       category: "Tools & Collaboration",
-      items: ["Git", "GitHub", "Postman", "VS Code", "Agile/Scrum"]
+      items: ["Git", "GitHub", "Postman", "VS Code", "Agile/Scrum","Jira", "Confluence", "Rally Board"]
     }
   ],
   experience: [
