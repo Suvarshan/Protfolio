@@ -1,35 +1,35 @@
 import type { PortfolioData } from '../types/portfolio';
 
 export const portfolioData: PortfolioData = {
-  about: `Full Stack Developer with over 2+ years of experience in building, modernizing, and deploying scalable enterprise and cloud-native applications. Demonstrates strong proficiency in Angular and React for frontend development, as well as Node.js and Express.js for backend services. Possesses hands-on experience in designing RESTful and GraphQL APIs, implementing serverless and event-driven architectures, and deploying applications across AWS, Google Cloud Platform, and Kubernetes environments. Actively utilizes AI-assisted development tools to enhance delivery speed while ensuring the production of clean, maintainable code. Comfortable operating within Agile/Scrum frameworks, with a commitment to end-to-end ownership of features from design through to deployment.`,
+  about: `Full Stack Developer with over 2.7+ years of experience in building, modernizing, and deploying scalable enterprise and cloud-native applications. Demonstrates strong proficiency in Angular and React for frontend development, as well as Node.js and Express.js for backend services. Possesses hands-on experience in designing RESTful and GraphQL APIs, implementing serverless and event-driven architectures, and deploying applications across AWS, Google Cloud Platform, and Kubernetes environments. Actively utilizes AI-assisted development tools to enhance delivery speed while ensuring the production of clean, maintainable code. Comfortable operating within Agile/Scrum frameworks, with a commitment to end-to-end ownership of features from design through to deployment.`,
   skills: [
     {
-      category: 'Frontend Development',
-      items: ['HTML5', 'CSS3', 'JavaScript (ES6+)', 'TypeScript', 'Angular (v14, v15, v17)', 'React', 'Bootstrap']
+      category: "Frontend Development",
+      items: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "Angular (v14, v15, v17)", "React", "Bootstrap"]
     },
     {
-      category: 'Backend Development',
-      items: ['Node.js (v18, v20, v22)', 'Express.js', 'RESTful APIs', 'GraphQL', 'Event APIs']
+      category: "Backend Development",
+      items: ["Node.js (v18, v20, v22)", "Express.js", "RESTful APIs", "GraphQL", "Event APIs"]
     },
     {
-      category: 'Database & Data Management',
-      items: ['MySQL', 'SQL Server', 'Schema Design', 'Query Optimization', 'Stored Procedures', 'TypeORM']
+      category: "Database & Data Management",
+      items: ["MySQL", "SQL Server", "Schema Design", "Query Optimization", "TypeORM"]
     },
     {
-      category: 'Cloud & DevOps',
-      items: ['AWS (CDK, Amplify, Lambda, S3, API Gateway, AppSync)', 'GCP (Cloud Functions, Cloud Storage)', 'Kubernetes', 'Jenkins CI/CD', 'GitHub Actions', 'Serverless Framework']
+      category: "Cloud & DevOps",
+      items: ["AWS (CDK, Amplify, Lambda, S3, API Gateway, AppSync)", "GCP (Cloud Functions, Cloud Storage, Storage buckets)", "GKE (Google Kubernetes Engine, Clusters, Deployments, Services)", "Jenkins CI/CD", "GitHub Actions", "Serverless Framework"]
     },
     {
-      category: 'Testing & Quality',
-      items: ['Jest', 'Mocha', 'Chai', 'Custom Test Runner', 'Unit Testing', 'Integration Testing']
+      category: "Testing & Quality",
+      items: ["Jest", "Mocha", "Chai", "Custom Test Runner", "Unit Testing", "Integration Testing"]
     },
     {
-      category: 'AI & Automation',
-      items: ['Claude', 'Cline', 'GitHub Copilot', 'Generative AI APIs', 'LLM Integration', 'Workflow Automation']
+      category: "AI & Automation",
+      items: ["Claude", "Cline", "GitHub Copilot", "Generative AI APIs", "LLM Integration", "Workflow Automation"]
     },
     {
-      category: 'Tools & Collaboration',
-      items: ['Git', 'GitHub', 'Postman', 'VS Code', 'Agile/Scrum']
+      category: "Tools & Collaboration",
+      items: ["Git", "GitHub", "Postman", "VS Code", "Agile/Scrum","Jira", "Confluence", "Rally Board"]
     }
   ],
   experience: [
