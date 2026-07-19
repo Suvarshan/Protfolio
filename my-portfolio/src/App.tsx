@@ -1,153 +1,121 @@
-
-import { useState } from 'react';
 import './App.css';
-import type { PortfolioData } from './types/portfolio';
 import { portfolioData } from './services/portfolioData';
 
 function App() {
-  const [data] = useState<PortfolioData>(portfolioData);
+  const data = portfolioData;
+  const primaryExperience = data.experience[0];
+
+  const heroStats = [
+    { value: '2.7+', label: 'Years Experience' },
+    { value: '10+', label: 'Projects Done' },
+    { value: '80+', label: 'Feature Deliveries' }
+  ];
+
+  const navItems = [
+    { href: '#home', label: 'Home' },
+    { href: '#skills', label: 'Tech Stack' },
+    { href: '#about', label: 'About Me' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#contact', label: 'Contact Me' }
+  ];
 
   return (
-    <div className="portfolio-container">
-      {/* Navigation */}
-      <nav className="navbar">
-        <div className="nav-brand">Suvarshan Muntha</div>
-        <ul className="nav-links">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#skills">SKILLS</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-        </ul>
-      </nav>
+    <div className="page-bg">
+      <div className="portfolio-shell">
+        <header className="topbar">
+          <a href="#home" className="logo">SUVARSHAN</a>
+          <nav className="topnav">
+            {navItems.map((item) => (
+              <a key={item.href} href={item.href}>{item.label}</a>
+            ))}
+          </nav>
+          <a href="#contact" className="hire-btn">Hire Me</a>
+        </header>
 
-      {/* Hero Section */}
-      <section id="home" className="hero-section">
-        <h1>Suvarshan Muntha</h1>
-        <p className="hero-subtitle">Full Stack Developer | AWS Cloud | Micro Services | AI Tools | Database Management (MySQL, SSMS) | API Development (GraphQL/AppSync, EventBridge) | GCP | Kubernetes</p>
-      </section>
+        <section id="home" className="hero">
+          <div className="hero-left">
+            <p className="intro-line">Hi I am</p>
+            <p className="name-line">Suvarshan Muntha</p>
+            <h1>Software Developer and AI Engineer</h1>
+            <p className="hero-text">
+              Building scalable products with clean architecture, cloud-native systems, and AI-assisted
+              delivery workflows.
+            </p>
 
-      {/* About Section with Profile Photo */}
-      <section id="about" className="about-section">
-        <div className="about-content">
-          <div className="profile-image-container">
-            <img src="/profile.png" alt="Suvarshan" className="profile-image" />
+            <div className="cta-row">
+              <a href="#contact" className="btn primary">Hire Me</a>
+              <a href="/resume.pdf" download className="btn ghost">Download CV</a>
+            </div>
+
+            <div className="stats-row">
+              {heroStats.map((stat) => (
+                <article key={stat.label}>
+                  <p>{stat.value}</p>
+                  <span>{stat.label}</span>
+                </article>
+              ))}
+            </div>
           </div>
-          <div className="about-text">
-            <h2>About Me</h2>
-            <p>{data.about}</p>
-            <a href="/resume.pdf" download className="download-btn-secondary">
-              <span className="btn-icon">⬇️</span>
-              <span className="btn-text">Download Resume</span>
-            </a>
+
+          <div className="hero-right">
+            <div className="image-ring" />
+            <img src="/profile.png" alt="Suvarshan Muntha" />
           </div>
-        </div>
-      </section>
-        <section className="skills" id="skills">
-          <h2>Technical Skills</h2>
+        </section>
+
+        <section id="about" className="info-card">
+          <h2>About Me</h2>
+          <p>{data.about}</p>
+        </section>
+
+        <section id="skills" className="info-card">
+          <h2>Tech Stack & Skills</h2>
           <div className="skills-grid">
-            {data.skills.map((skillGroup) => (
-              <div key={skillGroup.category} className="skill-column">
-                <h3>{skillGroup.category}</h3>
-                <ul>
-                  {skillGroup.items.map(item => <li key={item}>{item}</li>)}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-        <section className="experience" id="experience">
-          <h2>Experience</h2>
-          {data.experience.map((exp, idx) => (
-            <div key={idx} className="exp-item">
-              <h3>{exp.role} @ {exp.company}</h3>
-              <span>{exp.duration}</span>
-              <ul>
-                {exp.description.split(/\n|•/).map((d, i) => d.trim() && <li key={i}>{d.trim()}</li>)}
-              </ul>
-            </div>
-          ))}
-        </section>
-        <section className="projects" id ="projects">
-          <h2>Projects</h2>
-          <div className="projects-grid">
-            {data.projects.map((project, idx) => (
-              <div key={idx} className="project-card">
-                <h3>{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <div className="project-tech">
-                  <strong>Tech Stack:</strong>
-                  <ul>
-                    {project.technologies.map(tech => <li key={tech}>{tech}</li>)}
-                  </ul>
+            {data.skills.map((group) => (
+              <article key={group.category} className="skill-panel">
+                <h3>{group.category}</h3>
+                <div className="chip-wrap">
+                  {group.items.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
                 </div>
-                <div className="project-highlights">
-                  <strong>Highlights:</strong>
-                  <ul>
-                    {project.highlights.map((highlight, i) => <li key={i}>{highlight}</li>)}
-                  </ul>
-                </div>
-              </div>
+              </article>
             ))}
-          </div>
-        </section>
-        <section className="certifications">
-          <h2>Education</h2>
-          <ul>
-            {data.certifications.map(cert => <li key={cert}>{cert}</li>)}
-          </ul>
-        </section>
-        <section className="languages">
-          <h2>Languages</h2>
-          <p className="languages-list">{data.languages?.join(' | ')}</p>
-        </section>
-        <section id="contact" className="contact">
-          <h2>Get In Touch</h2>
-          <div className="contact-cards">
-            <div className="contact-card">
-              <div className="contact-icon">📧</div>
-              <h3>Email</h3>
-              <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a>
-            </div>
-            <div className="contact-card">
-              <div className="contact-icon">📞</div>
-              <h3>Phone</h3>
-              <p><a href={`tel:${data.contact.phone}`}>{data.contact.phone}</a></p>
-            </div>
-            <div className="contact-card">
-              <div className="contact-icon">💼</div>
-              <h3>LinkedIn</h3>
-              <a href={data.contact.linkedIn} target="_blank" rel="noopener noreferrer">Connect With Me</a>
-            </div>
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="portfolio-footer">
-          <div className="footer-content">
-            <div className="footer-section">
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-            <div className="footer-section">
-              <h4>Connect</h4>
-              <ul>
-                <li><a href={`mailto:${data.contact.email}`}>Email</a></li>
-                <li><a href={`tel:${data.contact.phone}`}>Phone</a></li>
-                <li><a href={data.contact.linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              </ul>
-            </div>
+        <section id="projects" className="info-card">
+          <h2>Projects</h2>
+          <div className="project-grid">
+            {data.projects.map((project, idx) => (
+              <article key={`${project.title}-${idx}`} className="project-card">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="chip-wrap">
+                  {project.technologies.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+                </div>
+                <ul className="project-highlights">
+                  {project.highlights.slice(0, 4).map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
-          <div className="footer-bottom">
-            <p>&copy; 2026 Suvarshan Muntha. All rights reserved.</p>
+        </section>
+
+        <section id="contact" className="info-card contact-card">
+          <h2>Contact Me</h2>
+          <p>{primaryExperience?.role} at {primaryExperience?.company}</p>
+          <div className="contact-actions">
+            <a href={`mailto:${data.contact.email}`}>Email</a>
+            <a href={`tel:${data.contact.phone}`}>Phone</a>
+            <a href={data.contact.linkedIn} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
-        </footer>
+        </section>
+      </div>
     </div>
   );
 }
