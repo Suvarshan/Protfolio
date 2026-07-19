@@ -31,7 +31,7 @@ function App() {
       <section id="about" className="about-section">
         <div className="about-content">
           <div className="profile-image-container">
-            <img src="/profile.jpg" alt="Suvarshan" className="profile-image" />
+            <img src="/profile.png" alt="Suvarshan" className="profile-image" />
           </div>
           <div className="about-text">
             <h2>About Me</h2>
